@@ -2,13 +2,16 @@ import {
   Container,
   Image,
   Inner,
+  Item,
   Pane,
   SubTitle,
   Title,
 } from "./Jumbotron.styles";
 
 const Jumbotron = ({ children, direction = "row", ...restProps }) => (
-  <Inner direction={direction}>{children}</Inner>
+  <Item direction={direction} {...restProps}>
+    <Inner>{children}</Inner>
+  </Item>
 );
 
 Jumbotron.Container = function JumbotronContainer({
