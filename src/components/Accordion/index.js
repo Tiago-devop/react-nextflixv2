@@ -40,10 +40,15 @@ Accordion.Header = function AccordionHeader({ children, ...restProps }) {
 
   return (
     <Header
-      onclick={() => setToggleShow((toggleShow) => !toggleShow)}
+      onClick={() => setToggleShow((toggleShow) => !toggleShow)}
       {...restProps}
     >
       {children}
+      {toggleShow ? (
+        <img src="/images/icons/close-slim.png" alt="Close" />
+      ) : (
+        <img src="/images/icons/add.png" alt="Open" />
+      )}
     </Header>
   );
 };
