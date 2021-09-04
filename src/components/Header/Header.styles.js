@@ -18,9 +18,12 @@ export const Container = styled.div`
   }
 `;
 
-export const Background = styled.div``;
+export const Background = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: url(${({src}) => src ? `../images/misc/${src}.jpg` : "../images/misc/home-bg.jpg"}) top left / cover no-repeat;
 
-export const Frame = styled.div``;
+`;
 
 export const Logo = styled.img`
   height: 32px;
